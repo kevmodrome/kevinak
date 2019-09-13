@@ -16,6 +16,28 @@
     flex: 0 1 auto;
   }
 
+  a {
+    position: relative;
+    color: black;
+    font-weight: bold;
+  }
+
+  a:hover:before {
+    right: auto;
+    width: 100%;
+  }
+
+  a:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 13px;
+    left: 0;
+    background-color: #353f99;
+    transition: all 0.2s ease-in-out 0s;
+  }
+
   ul {
     flex: 1 1 auto;
     margin: 0;
@@ -30,6 +52,7 @@
 
   li {
     display: block;
+    padding: 0 1em;
   }
 
   .selected {
@@ -40,16 +63,15 @@
   .selected::after {
     position: absolute;
     content: "";
-    width: calc(100% - 1em);
-    height: 2px;
-    background-color: rgb(255, 62, 0);
+    width: 100%;
+    height: 3px;
+    background-color: #353f99;
     display: block;
-    bottom: -1px;
   }
 
   a {
     text-decoration: none;
-    padding: 1em 0.5em;
+    padding: 1em 0;
     display: block;
   }
 </style>

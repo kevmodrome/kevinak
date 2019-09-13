@@ -5,7 +5,6 @@
 <style>
   .background {
     box-shadow: 50px 50px 0px 0px rgba(53, 63, 153, 1);
-    background: blue;
     display: flex;
   }
 </style>
