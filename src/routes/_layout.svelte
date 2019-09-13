@@ -5,13 +5,39 @@
 </script>
 
 <style>
+  :global(h1) {
+    font-family: "Merriwheather";
+    font-size: 24px;
+    font-weight: bold;
+    color: #353f99;
+  }
+  :global(h2) {
+    font-family: "Merriwheather";
+    font-size: 24px;
+    font-weight: normal;
+    color: #353f99;
+  }
+  :global(h3) {
+    font-family: "Merriwheather";
+    font-size: 24px;
+    font-weight: bold;
+    color: #353f99;
+  }
+  :global(p) {
+    font-family: "Open-sans";
+    font-size: 18px;
+    font-weight: normal;
+  }
+  :global(a) {
+    color: #353f99;
+  }
+
   .container {
     margin: 0 auto;
     padding: 0 120px;
     max-width: 1200px;
   }
   main {
-    background-color: green;
     width: 100%;
     box-sizing: border-box;
   }
