@@ -4,7 +4,17 @@
 
 <style>
   .container {
-    margin-right: 20px;
+    margin-right: 15px;
+  }
+  @media (min-width: 400px) {
+    .container {
+      margin-right: 35px;
+    }
+  }
+  @media (min-width: 1080px) {
+    .container {
+      margin-right: 50px;
+    }
   }
 
   img {
