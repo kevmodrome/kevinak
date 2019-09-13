@@ -1,60 +1,80 @@
 <script>
-	export let segment;
+  import Image from "svelte-image";
+  export let segment;
 </script>
 
 <style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-	}
+  nav {
+    width: 100%;
+    height: 150px;
 
-	ul {
-		margin: 0;
-		padding: 0;
-	}
+    display: flex;
+    align-items: center;
+  }
 
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
+  .logo-container {
+    flex: 0 1 auto;
+  }
 
-	li {
-		display: block;
-		float: left;
-	}
+  ul {
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  ul::after {
+    content: "";
+    display: block;
+  }
 
-	.selected {
-		position: relative;
-		display: inline-block;
-	}
+  li {
+    display: block;
+  }
 
-	.selected::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
+  .selected {
+    position: relative;
+    display: inline-block;
+  }
 
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
-	}
+  .selected::after {
+    position: absolute;
+    content: "";
+    width: calc(100% - 1em);
+    height: 2px;
+    background-color: rgb(255, 62, 0);
+    display: block;
+    bottom: -1px;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 1em 0.5em;
+    display: block;
+  }
 </style>
 
 <nav>
-	<ul>
-		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
-		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
-	</ul>
+  <div class="logo-container">
+    <img src="logo.svg" alt="KÅK logotype" />
+  </div>
+  <ul>
+    <li>
+      <a class={segment === undefined ? 'selected' : ''} href=".">HOME</a>
+    </li>
+    <li>
+      <a class={segment === 'about' ? 'selected' : ''} href="about">WORK</a>
+    </li>
+    <li>
+      <a class={segment === undefined ? 'selected' : ''} href=".">ABOUT</a>
+    </li>
+    <li>
+      <a
+        rel="prefetch"
+        class={segment === 'blog' ? 'selected' : ''}
+        href="blog">
+        BLOG
+      </a>
+    </li>
+  </ul>
 </nav>
