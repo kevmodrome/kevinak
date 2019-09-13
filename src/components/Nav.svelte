@@ -1,19 +1,34 @@
 <script>
-  import Image from "svelte-image";
+  import Logo from "./common/Logo.svelte";
+  import Hamburger from "./common/Hamburger.svelte";
   export let segment;
 </script>
 
 <style>
   nav {
     width: 100%;
-    height: 150px;
+    height: 100px;
 
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+  @media (min-width: 500px) {
+    nav {
+      height: 150px;
+      justify-content: space-between;
+    }
   }
 
   .logo-container {
     flex: 0 1 auto;
+    max-width: 65px;
+  }
+
+  @media (min-width: 800px) {
+    .logo-container {
+      max-width: 135px;
+    }
   }
 
   a {
@@ -39,11 +54,16 @@
   }
 
   ul {
-    flex: 1 1 auto;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
+    display: none;
+  }
+  @media (min-width: 500px) {
+    ul {
+      display: flex;
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+      justify-content: flex-end;
+    }
   }
   ul::after {
     content: "";
@@ -53,6 +73,19 @@
   li {
     display: block;
     padding: 0 1em;
+  }
+
+  .burger {
+    display: initial;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  @media (min-width: 500px) {
+    .burger {
+      display: none;
+    }
   }
 
   .selected {
@@ -77,8 +110,11 @@
 </style>
 
 <nav>
+  <div class="burger">
+    <Hamburger />
+  </div>
   <div class="logo-container">
-    <img src="logo.svg" alt="KÅK logotype" />
+    <Logo />
   </div>
   <ul>
     <li>

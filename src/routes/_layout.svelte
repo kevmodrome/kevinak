@@ -37,7 +37,7 @@
     padding: 0 20px;
     max-width: 1200px;
   }
-  @media (min-width: 400px) {
+  @media (min-width: 500px) {
     .container {
       padding: 0 40px;
     }
