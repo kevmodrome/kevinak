@@ -1,22 +1,62 @@
 <script>
-	import Nav from '../components/Nav.svelte';
+  import Nav from "../components/Nav.svelte";
 
-	export let segment;
+  export let segment;
 </script>
 
 <style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+  :global(h1) {
+    font-family: "Merriwheather";
+    font-size: 24px;
+    font-weight: bold;
+    color: #353f99;
+  }
+  :global(h2) {
+    font-family: "Merriwheather";
+    font-size: 24px;
+    font-weight: normal;
+    color: #353f99;
+  }
+  :global(h3) {
+    font-family: "Merriwheather";
+    font-size: 24px;
+    font-weight: bold;
+    color: #353f99;
+  }
+  :global(p) {
+    font-family: "Open-sans";
+    font-size: 18px;
+    font-weight: normal;
+  }
+  :global(a) {
+    color: #353f99;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+  }
+  @media (min-width: 500px) {
+    .container {
+      padding: 0 40px;
+    }
+  }
+  @media (min-width: 1080px) {
+    .container {
+      padding: 0 60px;
+    }
+  }
+  main {
+    width: 100%;
+    box-sizing: border-box;
+  }
 </style>
 
-<Nav {segment}/>
+<div class="container">
+  <Nav {segment} />
 
-<main>
-	<slot></slot>
-</main>
+  <main>
+    <slot />
+  </main>
+</div>

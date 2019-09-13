@@ -1,60 +1,138 @@
 <script>
-	export let segment;
+  import Logo from "./common/Logo.svelte";
+  import Hamburger from "./common/Hamburger.svelte";
+  export let segment;
 </script>
 
 <style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-	}
+  nav {
+    width: 100%;
+    height: 100px;
 
-	ul {
-		margin: 0;
-		padding: 0;
-	}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (min-width: 500px) {
+    nav {
+      height: 150px;
+      justify-content: space-between;
+    }
+  }
 
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
+  .logo-container {
+    flex: 0 1 auto;
+    max-width: 65px;
+  }
 
-	li {
-		display: block;
-		float: left;
-	}
+  @media (min-width: 800px) {
+    .logo-container {
+      max-width: 135px;
+    }
+  }
 
-	.selected {
-		position: relative;
-		display: inline-block;
-	}
+  a {
+    position: relative;
+    color: black;
+    font-weight: bold;
+  }
 
-	.selected::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
+  a:hover:before {
+    right: auto;
+    width: 100%;
+  }
 
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
-	}
+  a:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 13px;
+    left: 0;
+    background-color: #353f99;
+    transition: all 0.2s ease-in-out 0s;
+  }
+
+  ul {
+    display: none;
+  }
+  @media (min-width: 500px) {
+    ul {
+      display: flex;
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+      justify-content: flex-end;
+    }
+  }
+  ul::after {
+    content: "";
+    display: block;
+  }
+
+  li {
+    display: block;
+    padding: 0 1em;
+  }
+
+  .burger {
+    display: initial;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  @media (min-width: 500px) {
+    .burger {
+      display: none;
+    }
+  }
+
+  .selected {
+    position: relative;
+    display: inline-block;
+  }
+
+  .selected::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #353f99;
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 1em 0;
+    display: block;
+  }
 </style>
 
 <nav>
-	<ul>
-		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
-		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
-	</ul>
+  <div class="burger">
+    <Hamburger />
+  </div>
+  <div class="logo-container">
+    <Logo />
+  </div>
+  <ul>
+    <li>
+      <a class={segment === undefined ? 'selected' : ''} href=".">HOME</a>
+    </li>
+    <li>
+      <a class={segment === 'about' ? 'selected' : ''} href="about">WORK</a>
+    </li>
+    <li>
+      <a class={segment === undefined ? 'selected' : ''} href=".">ABOUT</a>
+    </li>
+    <li>
+      <a
+        rel="prefetch"
+        class={segment === 'blog' ? 'selected' : ''}
+        href="blog">
+        BLOG
+      </a>
+    </li>
+  </ul>
 </nav>
