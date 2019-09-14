@@ -30,6 +30,10 @@
   }
   :global(a) {
     color: #353f99;
+    text-decoration: none;
+  }
+  :global(a:visited) {
+    color: #353f99;
   }
 
   .container {
