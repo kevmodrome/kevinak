@@ -38,28 +38,6 @@
     }
   }
 
-  a {
-    position: relative;
-    color: black;
-    font-weight: bold;
-  }
-
-  a:hover:before {
-    right: auto;
-    width: 100%;
-  }
-
-  a:before {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    bottom: 13px;
-    left: 0;
-    background-color: #353f99;
-    transition: all 0.2s ease-in-out 0s;
-  }
-
   ul {
     display: none;
   }
@@ -93,26 +71,6 @@
     .burger {
       display: none;
     }
-  }
-
-  .selected {
-    position: relative;
-    display: inline-block;
-  }
-
-  .selected::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 3px;
-    background-color: #353f99;
-    display: block;
-  }
-
-  a {
-    text-decoration: none;
-    padding: 1em 0;
-    display: block;
   }
 </style>
 

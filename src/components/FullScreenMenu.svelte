@@ -4,6 +4,7 @@
   import Logo from "./common/Logo.svelte";
   import MenuItem from "./common/MenuItem.svelte";
   export let visible;
+  export let setVisible;
   export let segment;
 </script>
 
@@ -89,7 +90,7 @@
     in:fade={{ delay: 500, duration: 300 }}
     out:fade={{ delay: 0, duration: 150 }}
     class="close-button"
-    on:click={() => (visible = !visible)}>
+    on:click={() => setVisible()}>
     <Hamburger white />
   </div>
 {/if}
