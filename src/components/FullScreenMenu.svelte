@@ -67,7 +67,7 @@
     <div class="logo-container">
       <Logo white />
     </div>
-    <ul on:click={() => (visible = false)}>
+    <ul on:click={() => setVisible()}>
       <li in:fly={{ y: -20, delay: 500, duration: 1000 }}>
         <MenuItem white active={segment === undefined} href=".">HOME</MenuItem>
       </li>
