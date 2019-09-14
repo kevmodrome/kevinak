@@ -22,21 +22,7 @@
     max-height: 300px;
     object-fit: cover;
   }
-  h2 {
-    max-width: 700px;
-    color: #353f99;
-    font-size: 18px;
-  }
-  p {
-    font-size: 14px;
-  }
   @media (min-width: 500px) {
-    h2 {
-      font-size: 20px;
-    }
-    p {
-      font-size: 16px;
-    }
     img {
       height: 100%;
     }
@@ -53,12 +39,6 @@
     }
   }
   @media (min-width: 1080px) {
-    h2 {
-      font-size: 18px;
-    }
-    p {
-      font-size: 14px;
-    }
     img {
       height: 100%;
       max-height: 500px;

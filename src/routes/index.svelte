@@ -19,7 +19,6 @@
     height: 50vh;
   }
   h1 {
-    font-size: 16px;
     max-width: 700px;
     text-align: center;
     margin: 0 auto;
