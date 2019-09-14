@@ -50,10 +50,19 @@
   }
 
   .white-active::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
     background-color: white;
+    display: block;
   }
 </style>
 
-<a class:active class:white rel={prefetch ? 'prefetch' : null} {href}>
+<a
+  class={active & white ? 'white-active' : active ? 'active' : null}
+  class:white
+  rel={prefetch ? 'prefetch' : null}
+  {href}>
   <slot>Missing Link Text</slot>
 </a>

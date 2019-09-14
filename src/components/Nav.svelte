@@ -139,4 +139,4 @@
   </ul>
 </nav>
 
-<FullScreenMenu {visible} {setVisible} />
+<FullScreenMenu {visible} {setVisible} {segment} />
