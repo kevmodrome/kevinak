@@ -2,6 +2,7 @@
   import Logo from "./common/Logo.svelte";
   import Hamburger from "./common/Hamburger.svelte";
   export let segment;
+  let showMobileMenu = false;
 </script>
 
 <style>
@@ -107,6 +108,23 @@
     padding: 1em 0;
     display: block;
   }
+
+  .mobile-menu {
+    position: fixed;
+    background-color: #353f99;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-items {
+    background: red;
+  }
 </style>
 
 <nav>
@@ -136,3 +154,9 @@
     </li>
   </ul>
 </nav>
+
+{#if !showMobileMenu}
+  <div class="mobile-menu">
+    <div class="menu-items">Hej</div>
+  </div>
+{/if}
