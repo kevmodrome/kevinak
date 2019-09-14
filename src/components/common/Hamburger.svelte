@@ -3,11 +3,9 @@
 </script>
 
 <style>
-
+  .white {
+    filter: brightness(0) invert(1);
+  }
 </style>
 
-{#if white}
-  <img src="hamburger_white.svg" alt="Menu button" />
-{:else}
-  <img src="hamburger.svg" alt="Menu button" />
-{/if}
+<img class:white src="hamburger.svg" alt="Menu button" />
