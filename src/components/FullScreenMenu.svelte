@@ -91,6 +91,6 @@
     out:fade={{ delay: 0, duration: 150 }}
     class="close-button"
     on:click={() => setVisible()}>
-    <Hamburger white />
+    <Hamburger close />
   </div>
 {/if}

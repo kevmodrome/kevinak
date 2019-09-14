@@ -1,5 +1,6 @@
 <script>
   export let white;
+  export let close;
 </script>
 
 <style>
@@ -8,4 +9,8 @@
   }
 </style>
 
-<img class:white src="hamburger.svg" alt="Menu button" />
+{#if close}
+  <img class:white src="close.svg" alt="Menu button" />
+{:else}
+  <img class:white src="hamburger.svg" alt="Menu button" />
+{/if}
