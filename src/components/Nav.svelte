@@ -22,7 +22,7 @@
   }
   @media (min-width: 500px) {
     nav {
-      height: 150px;
+      height: 120px;
       justify-content: space-between;
     }
   }
@@ -34,7 +34,7 @@
 
   @media (min-width: 800px) {
     .logo-container {
-      max-width: 135px;
+      max-width: 100px;
     }
   }
 
@@ -74,6 +74,8 @@
   }
 </style>
 
+<FullScreenMenu {visible} {setVisible} {segment} />
+
 <nav>
   <div class="burger" on:click={setVisible}>
     <Hamburger />
@@ -96,5 +98,3 @@
     </li>
   </ul>
 </nav>
-
-<FullScreenMenu {visible} {setVisible} {segment} />
