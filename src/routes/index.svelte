@@ -4,11 +4,13 @@
   import Divider from "../components/common/Divider.svelte";
 
   import About from "../components/home/About.svelte";
+  import Client from "../components/home/Client.svelte";
 </script>
 
 <style>
   .container {
     margin-bottom: 100px;
+    margin: 0 auto;
   }
 
   img {
@@ -55,4 +57,9 @@
   </Tile>
   <Divider />
   <About />
+  <Divider />
+  <Tile>
+    <h2>Work</h2>
+    <Client />
+  </Tile>
 </div>

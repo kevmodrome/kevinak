@@ -42,7 +42,6 @@
     }
     .container {
       flex-direction: row;
-      max-width: 800px;
     }
     .image {
       flex: 1;
