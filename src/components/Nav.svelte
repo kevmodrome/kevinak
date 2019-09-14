@@ -1,7 +1,14 @@
 <script>
   import Logo from "./common/Logo.svelte";
   import Hamburger from "./common/Hamburger.svelte";
+  import MenuItem from "./common/MenuItem.svelte";
+  import FullScreenMenu from "./FullScreenMenu.svelte";
   export let segment;
+  let visible = false;
+
+  const setVisible = () => {
+    visible = !visible;
+  };
 </script>
 
 <style>
@@ -29,28 +36,6 @@
     .logo-container {
       max-width: 135px;
     }
-  }
-
-  a {
-    position: relative;
-    color: black;
-    font-weight: bold;
-  }
-
-  a:hover:before {
-    right: auto;
-    width: 100%;
-  }
-
-  a:before {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    bottom: 13px;
-    left: 0;
-    background-color: #353f99;
-    transition: all 0.2s ease-in-out 0s;
   }
 
   ul {
@@ -87,30 +72,10 @@
       display: none;
     }
   }
-
-  .selected {
-    position: relative;
-    display: inline-block;
-  }
-
-  .selected::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 3px;
-    background-color: #353f99;
-    display: block;
-  }
-
-  a {
-    text-decoration: none;
-    padding: 1em 0;
-    display: block;
-  }
 </style>
 
 <nav>
-  <div class="burger">
+  <div class="burger" on:click={setVisible}>
     <Hamburger />
   </div>
   <div class="logo-container">
@@ -118,21 +83,18 @@
   </div>
   <ul>
     <li>
-      <a class={segment === undefined ? 'selected' : ''} href=".">HOME</a>
+      <MenuItem active={segment === undefined} href=".">HOME</MenuItem>
     </li>
     <li>
-      <a class={segment === 'about' ? 'selected' : ''} href="about">WORK</a>
+      <MenuItem active={segment === 'work'} href="work">WORK</MenuItem>
     </li>
     <li>
-      <a class={segment === undefined ? 'selected' : ''} href=".">ABOUT</a>
+      <MenuItem active={segment === 'about'} href="about">ABOUT</MenuItem>
     </li>
     <li>
-      <a
-        rel="prefetch"
-        class={segment === 'blog' ? 'selected' : ''}
-        href="blog">
-        BLOG
-      </a>
+      <MenuItem prefetch active={segment === 'blog'} href="blog">BLOG</MenuItem>
     </li>
   </ul>
 </nav>
+
+<FullScreenMenu {visible} {setVisible} {segment} />
