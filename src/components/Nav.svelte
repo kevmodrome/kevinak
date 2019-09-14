@@ -1,8 +1,14 @@
 <script>
   import Logo from "./common/Logo.svelte";
   import Hamburger from "./common/Hamburger.svelte";
+  import MenuItem from "./common/MenuItem.svelte";
+  import FullScreenMenu from "./FullScreenMenu.svelte";
   export let segment;
-  let showMobileMenu = false;
+  let visible = false;
+
+  const setVisible = () => {
+    visible = !visible;
+  };
 </script>
 
 <style>
@@ -108,27 +114,10 @@
     padding: 1em 0;
     display: block;
   }
-
-  .mobile-menu {
-    position: fixed;
-    background-color: #353f99;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    border-bottom-right-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .menu-items {
-    background: red;
-  }
 </style>
 
 <nav>
-  <div class="burger">
+  <div class="burger" on:click={setVisible}>
     <Hamburger />
   </div>
   <div class="logo-container">
@@ -136,27 +125,18 @@
   </div>
   <ul>
     <li>
-      <a class={segment === undefined ? 'selected' : ''} href=".">HOME</a>
+      <MenuItem active={segment === undefined} href=".">HOME</MenuItem>
     </li>
     <li>
-      <a class={segment === 'about' ? 'selected' : ''} href="about">WORK</a>
+      <MenuItem active={segment === 'work'} href="work">WORK</MenuItem>
     </li>
     <li>
-      <a class={segment === undefined ? 'selected' : ''} href=".">ABOUT</a>
+      <MenuItem active={segment === 'about'} href="about">ABOUT</MenuItem>
     </li>
     <li>
-      <a
-        rel="prefetch"
-        class={segment === 'blog' ? 'selected' : ''}
-        href="blog">
-        BLOG
-      </a>
+      <MenuItem prefetch active={segment === 'blog'} href="blog">BLOG</MenuItem>
     </li>
   </ul>
 </nav>
 
-{#if !showMobileMenu}
-  <div class="mobile-menu">
-    <div class="menu-items">Hej</div>
-  </div>
-{/if}
+<FullScreenMenu {visible} {setVisible} />
