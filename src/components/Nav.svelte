@@ -1,4 +1,5 @@
 <script>
+  import { fade } from "svelte/transition";
   import Logo from "./common/Logo.svelte";
   import Hamburger from "./common/Hamburger.svelte";
   import MenuItem from "./common/MenuItem.svelte";
@@ -77,9 +78,11 @@
 <FullScreenMenu {visible} {setVisible} {segment} />
 
 <nav>
-  <div class="burger" on:click={setVisible}>
-    <Hamburger />
-  </div>
+  {#if !visible}
+    <div class="burger" on:click={setVisible} transition:fade>
+      <Hamburger />
+    </div>
+  {/if}
   <div class="logo-container">
     <Logo />
   </div>
