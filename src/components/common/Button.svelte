@@ -31,8 +31,6 @@
     border-radius: 8px;
     z-index: -1;
   }
-  .outline:hover::after {
-  }
   .primaryOutline {
     background: transparent;
     color: #353f99;
