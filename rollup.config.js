@@ -14,7 +14,7 @@ const dev = mode === "development";
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const appConfig = Object.keys(conf).reduce((acc, n) => {
-  acc[`process.env.${n}`] = JSON.stringify(conf[n]);
+  acc[`${n}`] = JSON.stringify(conf[n]);
   return acc;
 }, {});
 
