@@ -7,10 +7,16 @@ import babel from "rollup-plugin-babel";
 import { terser } from "rollup-plugin-terser";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
+import conf from "./config";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
+
+const appConfig = Object.keys(conf).reduce((acc, n) => {
+  acc[`process.env.${n}`] = JSON.stringify(conf[n]);
+  return acc;
+}, {});
 
 const onwarn = (warning, onwarn) =>
   (warning.code === "CIRCULAR_DEPENDENCY" &&
@@ -31,7 +37,8 @@ export default {
     plugins: [
       replace({
         "process.browser": true,
-        "process.env.NODE_ENV": JSON.stringify(mode)
+        "process.env.NODE_ENV": JSON.stringify(mode),
+        ...appConfig
       }),
       svelte({
         dev,
