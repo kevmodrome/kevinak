@@ -50,6 +50,7 @@
       margin: 0;
       padding: 0;
       justify-content: flex-end;
+      align-items: center;
     }
   }
   ul::after {
