@@ -16,7 +16,7 @@
   }
   img {
     width: 100%;
-    max-height: 200px;
+    max-height: 150px;
     object-fit: cover;
   }
   @media (min-width: 500px) {
@@ -49,7 +49,7 @@
 
 <div class="container">
   <div class="text">
-    <div class="title">Mäklarsamfundets Kundvägledarna</div>
+    <h3 class="title">Mäklarsamfundets Kundvägledarna</h3>
     <div class="text">
       Mäklarsamfundet wanted a website for their new service
       <span>

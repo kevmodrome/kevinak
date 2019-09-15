@@ -5,6 +5,26 @@
 </script>
 
 <style>
+  :global(html) {
+    /* Allows content to fill the viewport and go beyond the bottom */
+    height: 100%;
+
+    /* Allows you to scroll below the viewport; default value is visible */
+    overflow-y: scroll;
+
+    /* To smooth any scrolling behavior */
+    -webkit-overflow-scrolling: touch;
+  }
+  :global(body) {
+    /* Allows content to fill the viewport and go beyond the bottom */
+    height: 100%;
+
+    /* Allows you to scroll below the viewport; default value is visible */
+    overflow-y: scroll;
+
+    /* To smooth any scrolling behavior */
+    -webkit-overflow-scrolling: touch;
+  }
   :global(h1) {
     font-family: "Merriwheather";
     font-size: 24px;

@@ -21,6 +21,10 @@
     width: 100%;
   }
 
+  a:visited {
+    color: black;
+  }
+
   a:before {
     content: "";
     position: absolute;
@@ -37,11 +41,15 @@
     content: "";
     width: 100%;
     height: 3px;
+    color: black;
     background-color: #353f99;
     display: block;
   }
 
   .white {
+    color: white;
+  }
+  .white:visited {
     color: white;
   }
 
