@@ -3,6 +3,7 @@
   import Logo from "./common/Logo.svelte";
   import Hamburger from "./common/Hamburger.svelte";
   import MenuItem from "./common/MenuItem.svelte";
+  import Button from "./common/Button.svelte";
   import FullScreenMenu from "./FullScreenMenu.svelte";
   export let segment;
   let visible = false;
@@ -62,7 +63,6 @@
   }
 
   .burger {
-    display: initial;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -98,6 +98,9 @@
     </li>
     <li>
       <MenuItem prefetch active={segment === 'blog'} href="blog">BLOG</MenuItem>
+    </li>
+    <li>
+      <Button blackOutline>REACH OUT</Button>
     </li>
   </ul>
 </nav>
