@@ -1,26 +1,18 @@
 <script>
-  import TileWithBackground from "../components/common/TileWithBackground.svelte";
+  import Divider from "../components/common/Divider.svelte";
+
+  import Headline from "../components/home/Headline.svelte";
+  import About from "../components/home/About.svelte";
+  import Work from "../components/home/Work.svelte";
+  import Skills from "../components/home/Skills.svelte";
+  import Instagram from "../components/home/Instagram.svelte";
+  import Footer from "../components/Footer.svelte";
 </script>
 
 <style>
-  .container {
-    margin-right: 15px;
-  }
-  @media (min-width: 400px) {
-    .container {
-      margin-right: 35px;
-    }
-  }
-  @media (min-width: 1080px) {
-    .container {
-      margin-right: 50px;
-    }
-  }
-
-  img {
-    width: 100%;
-    height: 750px;
-    object-fit: cover;
+  div {
+    margin-bottom: 100px;
+    margin: 0 auto;
   }
 </style>
 
@@ -28,8 +20,14 @@
   <title>Kevin Åberg Kultalahti's Personal Website</title>
 </svelte:head>
 
-<div class="container">
-  <TileWithBackground>
-    <img src="test.jpg" alt="" />
-  </TileWithBackground>
+<div>
+  <Headline />
+  <Divider />
+  <About />
+  <Divider />
+  <Work />
+  <Divider />
+  <Skills />
+  <Divider />
+  <Instagram />
 </div>

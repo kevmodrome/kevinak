@@ -7,10 +7,16 @@ import babel from "rollup-plugin-babel";
 import { terser } from "rollup-plugin-terser";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
+import conf from "config";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
+
+const appConfig = Object.keys(conf).reduce((acc, n) => {
+  acc[`${n}`] = JSON.stringify(conf[n]);
+  return acc;
+}, {});
 
 const onwarn = (warning, onwarn) =>
   (warning.code === "CIRCULAR_DEPENDENCY" &&
@@ -20,8 +26,15 @@ const dedupe = importee =>
   importee === "svelte" || importee.startsWith("svelte/");
 
 const preprocess = {
-  ...image,
-  placeholder: "trace"
+  ...image({
+    trace: {
+      // Potrace options for SVG placeholder
+      background: "#fff",
+      color: "#002fa7",
+      threshold: 120
+    },
+    optimizeAll: false
+  })
 };
 
 export default {
@@ -31,13 +44,24 @@ export default {
     plugins: [
       replace({
         "process.browser": true,
-        "process.env.NODE_ENV": JSON.stringify(mode)
+        "process.env.NODE_ENV": JSON.stringify(mode),
+        ...appConfig
       }),
       svelte({
         dev,
         hydratable: true,
         emitCss: true,
-        preprocess: { ...image }
+        preprocess: {
+          ...image({
+            trace: {
+              // Potrace options for SVG placeholder
+              background: "#fff",
+              color: "rgba(53, 63, 153, 1)",
+              threshold: 120
+            },
+           optimizeAll: false
+          })
+        }
       }),
       resolve({
         browser: true,

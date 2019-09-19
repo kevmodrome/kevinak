@@ -1,7 +1,9 @@
 <script>
+  import { fade } from "svelte/transition";
   import Logo from "./common/Logo.svelte";
   import Hamburger from "./common/Hamburger.svelte";
   import MenuItem from "./common/MenuItem.svelte";
+  import Button from "./common/Button.svelte";
   import FullScreenMenu from "./FullScreenMenu.svelte";
   export let segment;
   let visible = false;
@@ -13,6 +15,7 @@
 
 <style>
   nav {
+    position: relative;
     width: 100%;
     height: 100px;
 
@@ -22,7 +25,7 @@
   }
   @media (min-width: 500px) {
     nav {
-      height: 150px;
+      height: 120px;
       justify-content: space-between;
     }
   }
@@ -34,7 +37,7 @@
 
   @media (min-width: 800px) {
     .logo-container {
-      max-width: 135px;
+      max-width: 100px;
     }
   }
 
@@ -48,6 +51,7 @@
       margin: 0;
       padding: 0;
       justify-content: flex-end;
+      align-items: center;
     }
   }
   ul::after {
@@ -61,10 +65,9 @@
   }
 
   .burger {
-    display: initial;
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 0;
   }
 
   @media (min-width: 500px) {
@@ -74,10 +77,14 @@
   }
 </style>
 
+<FullScreenMenu {visible} {setVisible} {segment} />
+
 <nav>
-  <div class="burger" on:click={setVisible}>
-    <Hamburger />
-  </div>
+  {#if !visible}
+    <div class="burger" on:click={setVisible} transition:fade>
+      <Hamburger />
+    </div>
+  {/if}
   <div class="logo-container">
     <Logo />
   </div>
@@ -94,7 +101,8 @@
     <li>
       <MenuItem prefetch active={segment === 'blog'} href="blog">BLOG</MenuItem>
     </li>
+    <li>
+      <Button blackOutline>REACH OUT</Button>
+    </li>
   </ul>
 </nav>
-
-<FullScreenMenu {visible} {setVisible} {segment} />
