@@ -26,8 +26,15 @@ const dedupe = importee =>
   importee === "svelte" || importee.startsWith("svelte/");
 
 const preprocess = {
-  ...image,
-  placeholder: "trace"
+  ...image({
+    trace: {
+      // Potrace options for SVG placeholder
+      background: "#fff",
+      color: "#002fa7",
+      threshold: 120
+    },
+    inlineBelow: 1
+  })
 };
 
 export default {
@@ -44,7 +51,17 @@ export default {
         dev,
         hydratable: true,
         emitCss: true,
-        preprocess: { ...image }
+        preprocess: {
+          ...image({
+            trace: {
+              // Potrace options for SVG placeholder
+              background: "#fff",
+              color: "rgba(53, 63, 153, 1)",
+              threshold: 120
+            },
+            inlineBelow: 1
+          })
+        }
       }),
       resolve({
         browser: true,

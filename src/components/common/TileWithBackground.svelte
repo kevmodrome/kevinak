@@ -1,7 +1,3 @@
-<script>
-  import Image from "svelte-image";
-</script>
-
 <style>
   .background {
     box-shadow: 15px 15px 0px 0px rgba(53, 63, 153, 1);

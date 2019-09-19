@@ -30,6 +30,7 @@
     position: fixed;
     top: 20px;
     left: 20px;
+    z-index: 101;
   }
 
   .mobile-menu {
@@ -40,6 +41,7 @@
     width: 200%;
     height: 200%;
     border-bottom-right-radius: 1000px;
+    z-index: 100;
   }
 
   .menu-items {
@@ -52,6 +54,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 101;
   }
 </style>
 
@@ -90,7 +93,7 @@
     in:fade={{ delay: 500, duration: 300 }}
     out:fade={{ delay: 0, duration: 150 }}
     class="close-button"
-    on:click={() => setVisible()}>
+    on:click={setVisible}>
     <Hamburger close />
   </div>
 {/if}
