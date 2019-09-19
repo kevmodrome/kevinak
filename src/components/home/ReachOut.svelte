@@ -20,6 +20,7 @@
 
   p {
     text-align: center;
+    max-width: 320px;
   }
 </style>
 
@@ -29,5 +30,5 @@
     Are you looking for someone to efficiently and swiftly create your next
     project? Reach out by clicking the button bellow.
   </p>
-  <Button primary>REACH OUT</Button>
+  <Button big>CONTACT</Button>
 </div>

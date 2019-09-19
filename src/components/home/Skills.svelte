@@ -2,12 +2,14 @@
   import TileWithBackground from "../common/TileWithBackground.svelte";
   import Tile from "../common/Tile.svelte";
   import ReachOut from "./ReachOut.svelte";
+  import SkillsBox from "./SkillsBox.svelte";
 </script>
 
 <style>
   .container {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .call-to-action {
     flex: 1 1 0;
@@ -39,6 +41,8 @@
     <div class="call-to-action">
       <ReachOut />
     </div>
-    <div class="skills">Skills</div>
+    <div class="skills">
+      <SkillsBox />
+    </div>
   </div>
 </Tile>
