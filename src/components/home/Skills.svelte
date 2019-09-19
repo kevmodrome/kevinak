@@ -7,12 +7,13 @@
 <style>
   .container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
   }
   .call-to-action {
+    flex: 1 1 0;
   }
   .skills {
+    flex: 1 1 0;
     display: none;
   }
   @media (min-width: 500px) {
