@@ -2,6 +2,7 @@
   export let outline;
   export let primaryOutline;
   export let blackOutline;
+  export let big;
 </script>
 
 <style>
@@ -56,8 +57,12 @@
     color: #353f99;
     border: solid 3px #353f99;
   }
+  .big {
+    padding: 15px 20px;
+    font-size: 18px;
+  }
 </style>
 
-<button class:outline class:primaryOutline class:blackOutline>
+<button class:outline class:primaryOutline class:blackOutline class:big>
   <slot />
 </button>
