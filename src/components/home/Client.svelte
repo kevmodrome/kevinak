@@ -1,7 +1,23 @@
 <style>
   .container {
+    position: relative;
     display: flex;
     flex-direction: column;
+  }
+  .container:hover:before {
+    transform: scaleY(1);
+  }
+
+  .container:before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 100%;
+    top: 0;
+    left: -20px;
+    background-color: #353f99;
+    transition: all 0.2s ease-in-out 0s;
+    transform: scaleY(0);
   }
   .text {
     flex: 1;
