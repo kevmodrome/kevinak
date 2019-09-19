@@ -5,6 +5,8 @@
   import About from "../components/home/About.svelte";
   import Work from "../components/home/Work.svelte";
   import Skills from "../components/home/Skills.svelte";
+  import Instagram from "../components/home/Instagram.svelte";
+  import Footer from "../components/Footer.svelte";
 </script>
 
 <style>
@@ -26,4 +28,7 @@
   <Work />
   <Divider />
   <Skills />
+  <Divider />
+  <Instagram />
+  <Footer />
 </div>
