@@ -1,43 +1,16 @@
 <script>
-  import TileWithBackground from "../components/common/TileWithBackground.svelte";
-  import Tile from "../components/common/Tile.svelte";
   import Divider from "../components/common/Divider.svelte";
 
+  import Headline from "../components/home/Headline.svelte";
   import About from "../components/home/About.svelte";
   import Work from "../components/home/Work.svelte";
+  import Skills from "../components/home/Skills.svelte";
 </script>
 
 <style>
-  .container {
+  div {
     margin-bottom: 100px;
     margin: 0 auto;
-  }
-
-  img {
-    width: 100%;
-    max-height: 50vh;
-    object-fit: cover;
-  }
-  h1 {
-    max-width: 700px;
-    text-align: center;
-    margin: 0 auto;
-  }
-  @media (min-width: 500px) {
-    img {
-      max-height: 55vh;
-    }
-    h1 {
-      font-size: 18px;
-    }
-  }
-  @media (min-width: 1080px) {
-    img {
-      max-height: 60vh;
-    }
-    h1 {
-      font-size: 24px;
-    }
   }
 </style>
 
@@ -45,15 +18,8 @@
   <title>Kevin Åberg Kultalahti's Personal Website</title>
 </svelte:head>
 
-<div class="container">
-  <TileWithBackground>
-    <img src="test.jpg" alt="A picture of me." />
-  </TileWithBackground>
-  <Tile>
-    <h1>
-      Hello, I’m Kevin, a React Native developer based in Stockholm, Sweden.
-    </h1>
-  </Tile>
+<div>
+  <Headline />
   <Divider />
   <About />
   <Divider />
