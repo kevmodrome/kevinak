@@ -25,4 +25,5 @@
   <Divider />
   <Work />
   <Divider />
+  <Skills />
 </div>
