@@ -60,5 +60,6 @@
   <Tile>
     <h2>Work</h2>
     <Client />
+    <Client />
   </Tile>
 </div>
