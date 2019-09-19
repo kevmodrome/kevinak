@@ -1,5 +1,6 @@
 <script>
   import Nav from "../components/Nav.svelte";
+  import Footer from "../components/Footer.svelte";
 
   export let segment;
 </script>
@@ -21,6 +22,7 @@
 
     /* Allows you to scroll below the viewport; default value is visible */
     overflow-y: scroll;
+    overflow-x: hidden;
 
     /* To smooth any scrolling behavior */
     -webkit-overflow-scrolling: touch;
@@ -89,3 +91,4 @@
     <slot />
   </main>
 </div>
+<Footer />

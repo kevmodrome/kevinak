@@ -30,5 +30,4 @@
   <Skills />
   <Divider />
   <Instagram />
-  <Footer />
 </div>
