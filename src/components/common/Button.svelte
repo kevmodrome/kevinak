@@ -14,7 +14,10 @@
     background: #353f99;
     border-radius: 8px;
     border: none;
-    transition: outline 0.6s linear;
+    transition: all 0.2s linear;
+  }
+  button:hover {
+    background: #202660;
   }
   .outline {
     background: transparent;
@@ -37,9 +40,10 @@
     border: solid 3px #353f99;
     border-radius: 8px;
   }
-  .primaryOutline {
-    color: black;
-    border: solid 3px black;
+  .primaryOutline:hover {
+    background: #353f99;
+    color: white;
+    border-radius: 8px;
   }
   .blackOutline {
     background: transparent;
@@ -48,6 +52,7 @@
     border-radius: 8px;
   }
   .blackOutline:hover {
+    background: transparent;
     color: #353f99;
     border: solid 3px #353f99;
   }
