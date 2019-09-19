@@ -15,6 +15,7 @@
 
 <style>
   nav {
+    position: relative;
     width: 100%;
     height: 100px;
 
@@ -66,7 +67,7 @@
   .burger {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 0;
   }
 
   @media (min-width: 500px) {

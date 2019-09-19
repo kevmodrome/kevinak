@@ -15,8 +15,8 @@
 
   img {
     width: 100%;
+    max-height: 50vh;
     object-fit: cover;
-    height: 50vh;
   }
   h1 {
     max-width: 700px;
@@ -25,7 +25,7 @@
   }
   @media (min-width: 500px) {
     img {
-      height: 55vh;
+      max-height: 55vh;
     }
     h1 {
       font-size: 18px;
@@ -33,7 +33,7 @@
   }
   @media (min-width: 1080px) {
     img {
-      height: 60vh;
+      max-height: 60vh;
     }
     h1 {
       font-size: 24px;
@@ -47,7 +47,7 @@
 
 <div class="container">
   <TileWithBackground>
-    <img src="test.jpg" alt="" />
+    <img src="test.jpg" />
   </TileWithBackground>
   <Tile>
     <h1>
