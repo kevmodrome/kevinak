@@ -47,7 +47,7 @@
 
 <div class="container">
   <TileWithBackground>
-    <img src="test.jpg" />
+    <img src="test.jpg" alt="A picture of me." />
   </TileWithBackground>
   <Tile>
     <h1>

@@ -33,7 +33,7 @@ const preprocess = {
       color: "#002fa7",
       threshold: 120
     },
-    inlineBelow: 1
+    optimizeAll: false
   })
 };
 
@@ -59,7 +59,7 @@ export default {
               color: "rgba(53, 63, 153, 1)",
               threshold: 120
             },
-            inlineBelow: 1
+           optimizeAll: false
           })
         }
       }),
