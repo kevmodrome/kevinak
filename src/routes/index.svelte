@@ -13,6 +13,40 @@
     margin: 0 auto;
   }
 
+  .more-work {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .hover-effect {
+    position: relative;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1em 0;
+    display: block;
+  }
+
+  .hover-effect:hover:before {
+    right: auto;
+    width: 100%;
+  }
+
+  .hover-effect:visited {
+    color: black;
+  }
+
+  .hover-effect:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 13px;
+    left: 0;
+    background-color: #353f99;
+    transition: all 0.2s ease-in-out 0s;
+  }
+
   img {
     width: 100%;
     max-height: 50vh;
@@ -61,5 +95,8 @@
     <h2>Work</h2>
     <Client />
     <Client />
+    <div class="more-work">
+      <a class="hover-effect" href="/"><h3>See more of my work &#8594</h3></a>
+    </div>
   </Tile>
 </div>
