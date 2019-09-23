@@ -8,7 +8,7 @@
     background: #202660;
     color: white;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin: 0 auto;
     padding: 0 20px;
     padding-top: 25px;
@@ -24,7 +24,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+  }
+
+  ul {
+    padding-left: 10px;
+  }
+
+  li {
+    list-style-type: none;
   }
 
   h4 {
@@ -34,6 +42,9 @@
     flex: 0 1 auto;
     margin-bottom: 20px;
   }
+  p {
+    font-size: 14px;
+  }
   @media (min-width: 500px) {
     .container {
       padding: 0 40px;
@@ -42,6 +53,7 @@
     .columns {
       flex-direction: row;
       justify-content: space-between;
+      align-items: space-between;
     }
     h4 {
       max-width: 100%;
@@ -56,7 +68,6 @@
     .container {
       padding: 0 60px;
       padding-top: 80px;
-      flex-direction: column;
     }
     h4 {
       max-width: 100%;
@@ -69,10 +80,20 @@
   <div class="center">
     <h4>...so you’ve come to the end of the line?</h4>
     <div class="columns">
-      <FooterColumn />
-      <FooterColumn />
-      <FooterColumn />
-      <FooterColumn />
+      <FooterColumn title="Social Media">
+        <ul>
+          <li>Github</li>
+          <li>LinkedIn</li>
+          <li>Instagram</li>
+          <li>Keybase</li>
+        </ul>
+      </FooterColumn>
+      <FooterColumn title="About This Website">
+        <p>
+          This website is built using Svelte and Sapper - a new kind of
+          framework focusing on speed, developer experience and bundle size.
+        </p>
+      </FooterColumn>
     </div>
   </div>
 </footer>

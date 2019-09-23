@@ -45,6 +45,16 @@
     font-weight: bold;
     color: #353f99;
   }
+  :global(h4) {
+    font-family: "Merriweather", serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  :global(h5) {
+    font-family: "Merriweather", serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
   :global(p) {
     font-family: "Open Sans";
     font-size: 18px;
