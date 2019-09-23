@@ -16,6 +16,7 @@
     border-radius: 8px;
     border: none;
     transition: all 0.2s linear;
+    cursor: pointer;
   }
   button:hover {
     background: #202660;
