@@ -27,12 +27,24 @@
     align-items: stretch;
   }
 
+  a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1em 0;
+  }
+
+  a:visited {
+    color: whitesmoke;
+  }
+
   ul {
     padding-left: 10px;
   }
 
   li {
     list-style-type: none;
+    margin: 0 10px;
   }
 
   h4 {
@@ -82,16 +94,25 @@
     <div class="columns">
       <FooterColumn title="Social Media">
         <ul>
-          <li>Github</li>
-          <li>LinkedIn</li>
-          <li>Instagram</li>
-          <li>Keybase</li>
+          <li>
+            <a href="/">Github</a>
+          </li>
+          <li>
+            <a href="/">LinkedIn</a>
+          </li>
+          <li>
+            <a href="/">Instagram</a>
+          </li>
+          <li>
+            <a href="/">Keybase</a>
+          </li>
         </ul>
       </FooterColumn>
       <FooterColumn title="About This Website">
         <p>
-          This website is built using Svelte and Sapper - a new kind of
-          framework focusing on speed, developer experience and bundle size.
+          This website is built using Svelte and Sapper. If you want to read
+          more about it you can do it
+          <a href="/">here.</a>
         </p>
       </FooterColumn>
     </div>
