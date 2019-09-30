@@ -4,14 +4,12 @@
 
 <style>
   .container {
-    min-height: 370px;
     background: #202660;
     color: white;
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    padding: 0 20px;
-    padding-top: 25px;
+    padding: 30px 20px;
   }
 
   .center {
@@ -46,30 +44,17 @@
     list-style-type: none;
     margin: 0 10px;
   }
-
-  h4 {
-    font-family: "Merriweather";
-    font-size: 28px;
-    max-width: 280px;
-    flex: 0 1 auto;
-    margin-bottom: 20px;
-  }
   p {
     font-size: 14px;
   }
   @media (min-width: 500px) {
     .container {
-      padding: 0 40px;
-      padding-top: 60px;
+      padding: 40px;
     }
     .columns {
       flex-direction: row;
       justify-content: space-between;
       align-items: space-between;
-    }
-    h4 {
-      max-width: 100%;
-      margin-bottom: 30px;
     }
     .columns {
       flex-direction: row;
@@ -78,19 +63,13 @@
   }
   @media (min-width: 1080px) {
     .container {
-      padding: 0 60px;
-      padding-top: 80px;
-    }
-    h4 {
-      max-width: 100%;
-      margin-bottom: 40px;
+      padding: 60px;
     }
   }
 </style>
 
 <footer class="container">
   <div class="center">
-    <h4>...so you’ve come to the end of the line?</h4>
     <div class="columns">
       <FooterColumn title="Connect with me">
         <ul>
@@ -105,6 +84,25 @@
           </li>
           <li>
             <a href="/">Keybase</a>
+          </li>
+        </ul>
+      </FooterColumn>
+      <FooterColumn title="Sitemap">
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">Work</a>
+          </li>
+          <li>
+            <a href="/">About</a>
+          </li>
+          <li>
+            <a href="/">Blog</a>
+          </li>
+          <li>
+            <a href="/">Reach Out</a>
           </li>
         </ul>
       </FooterColumn>
