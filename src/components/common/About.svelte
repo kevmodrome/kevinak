@@ -1,4 +1,6 @@
 <script>
+  export let title;
+  export let reverse;
   import Tile from "../common/Tile.svelte";
 </script>
 
@@ -29,6 +31,9 @@
     .container {
       flex-direction: row;
     }
+    .reverse {
+      flex-direction: row-reverse;
+    }
     .image {
       flex: 1;
       margin-top: 0px;
@@ -46,6 +51,9 @@
     .container {
       flex-direction: row;
     }
+    .reverse {
+      flex-direction: row-reverse;
+    }
     .image {
       flex: 1;
       margin-top: 0px;
@@ -58,13 +66,15 @@
 </style>
 
 <Tile>
-  <div class="container">
+  <div class="container" class:reverse>
     <div class="image">
       <img src="test.jpg" alt="Image of me doing coding." />
     </div>
 
     <div class="text">
-      <h2>About Me</h2>
+      {#if title}
+        <h2>{title}</h2>
+      {/if}
       <p>
         Eget montes, molestie sapien morbi vitae, ipsum. Viverra bibendum amet
         metus malesuada mus arcu ut turpis. Iaculis fames aenean nisi, id

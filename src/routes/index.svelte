@@ -2,7 +2,7 @@
   import Divider from "../components/common/Divider.svelte";
 
   import Headline from "../components/home/Headline.svelte";
-  import About from "../components/home/About.svelte";
+  import About from "../components/common/About.svelte";
   import Work from "../components/home/Work.svelte";
   import Skills from "../components/home/Skills.svelte";
   import Instagram from "../components/home/Instagram.svelte";
@@ -23,7 +23,7 @@
 <div>
   <Headline />
   <Divider />
-  <About />
+  <About title="About Me" />
   <Divider />
   <Work />
   <Divider />
