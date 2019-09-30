@@ -92,7 +92,7 @@
   <div class="center">
     <h4>...so you’ve come to the end of the line?</h4>
     <div class="columns">
-      <FooterColumn title="Social Media">
+      <FooterColumn title="Connect with me">
         <ul>
           <li>
             <a href="/">Github</a>

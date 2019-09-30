@@ -41,6 +41,7 @@
     content: "";
     width: 100%;
     height: 3px;
+    bottom: 13px;
     color: black;
     background-color: #353f99;
     display: block;
