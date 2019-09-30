@@ -32,6 +32,25 @@
     position: relative;
   }
 
+  .grid > * {
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 2rem 1rem;
+    cursor: pointer;
+
+    pointer-events: auto;
+    transition: 300ms opacity, 300ms transform;
+  }
+
+  .grid:hover > * {
+    opacity: 0.4;
+  }
+
+  .grid:hover > *:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
   img {
     position: absolute;
     top: 0;

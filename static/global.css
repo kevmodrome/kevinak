@@ -1,36 +1,73 @@
+html {
+  /* Allows content to fill the viewport and go beyond the bottom */
+  height: 100%;
+
+  /* Allows you to scroll below the viewport; default value is visible */
+  overflow-y: scroll;
+
+  /* To smooth any scrolling behavior */
+  -webkit-overflow-scrolling: touch;
+}
 body {
-	margin: 0;
-	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
-	color: #333;
-}
+  /* Allows content to fill the viewport and go beyond the bottom */
+  height: 100%;
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5em 0;
-	font-weight: 400;
-	line-height: 1.2;
-}
+  /* Allows you to scroll below the viewport; default value is visible */
+  overflow-y: scroll;
+  overflow-x: hidden;
 
+  /* To smooth any scrolling behavior */
+  -webkit-overflow-scrolling: touch;
+
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
 h1 {
-	font-size: 2em;
+  font-family: "Merriweather", serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #353f99;
 }
-
+h2 {
+  font-family: "Merriweather", serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #353f99;
+}
+h3 {
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #353f99;
+}
+h4 {
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+h5 {
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+p {
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: normal;
+}
+button {
+  font-family: "Open Sans";
+  font-weight: normal;
+}
 a {
-	color: inherit;
+  color: #353f99;
+  font-weight: bold;
+  text-decoration: none;
 }
-
-code {
-	font-family: menlo, inconsolata, monospace;
-	font-size: calc(1em - 2px);
-	color: #555;
-	background-color: #f0f0f0;
-	padding: 0.2em 0.4em;
-	border-radius: 2px;
-}
-
-@media (min-width: 400px) {
-	body {
-		font-size: 16px;
-	}
+a:visited {
+  color: #353f99;
 }
