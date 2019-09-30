@@ -13,6 +13,7 @@
     grid-auto-rows: 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    pointer-events: none;
   }
   .grid::before {
     content: "";
