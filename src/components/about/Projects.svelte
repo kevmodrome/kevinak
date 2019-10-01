@@ -7,7 +7,7 @@
     margin: 20px auto;
     margin-bottom: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-column-gap: 25px;
     grid-row-gap: 25px;
   }
@@ -17,8 +17,11 @@
   }
 
   h2 {
+    width: 100%;
+    max-width: 800px;
     grid-column: 1 / -1;
     cursor: pointer;
+    place-self: center;
   }
 
   @media (min-width: 600px) {
