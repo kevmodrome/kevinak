@@ -1,5 +1,6 @@
 <script>
   import Project from "./Project.svelte";
+  import Button from "../common/Button.svelte";
 </script>
 
 <style>
@@ -24,6 +25,15 @@
     place-self: center;
   }
 
+  .more {
+    place-self: center;
+    grid-column: 1 / -1;
+  }
+
+  a:hover {
+    color: white;
+  }
+
   @media (min-width: 600px) {
     .grid {
       margin: 50px auto;
@@ -46,12 +56,9 @@
   <Project />
   <Project />
   <Project />
-  <Project />
-  <Project />
-  <Project />
-  <Project />
-  <Project />
-  <Project />
-  <Project />
-  <Project />
+  <div class="more">
+    <a href="/work">
+      <Button primaryOutline big>SEE MORE</Button>
+    </a>
+  </div>
 </div>
