@@ -1,59 +1,20 @@
 <script>
+  export let title;
+  export let reverse;
   import Tile from "../common/Tile.svelte";
 </script>
 
 <style>
   .container {
-    display: flex;
-    flex-direction: column-reverse;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 20px;
     max-width: 800px;
-    margin: 0 auto;
-  }
-  .image {
-    flex: 1;
-    margin-top: 20px;
-  }
-  .text {
-    flex: 1;
   }
   img {
     width: 100%;
     max-height: 500px;
-    max-height: 300px;
     object-fit: cover;
-  }
-  @media (min-width: 500px) {
-    img {
-      height: 100%;
-    }
-    .container {
-      flex-direction: row;
-    }
-    .image {
-      flex: 1;
-      margin-top: 0px;
-      margin-right: 20px;
-    }
-    .text {
-      flex: 2;
-    }
-  }
-  @media (min-width: 1080px) {
-    img {
-      height: 100%;
-      max-height: 500px;
-    }
-    .container {
-      flex-direction: row;
-    }
-    .image {
-      flex: 1;
-      margin-top: 0px;
-      margin-right: 20px;
-    }
-    .text {
-      flex: 2;
-    }
   }
 </style>
 
@@ -64,7 +25,9 @@
     </div>
 
     <div class="text">
-      <h2>About Me</h2>
+      {#if title}
+        <h2>{title}</h2>
+      {/if}
       <p>
         Eget montes, molestie sapien morbi vitae, ipsum. Viverra bibendum amet
         metus malesuada mus arcu ut turpis. Iaculis fames aenean nisi, id

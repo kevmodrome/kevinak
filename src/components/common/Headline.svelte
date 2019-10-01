@@ -1,4 +1,6 @@
 <script>
+  export let image;
+  export let title;
   import TileWithBackground from "../common/TileWithBackground.svelte";
   import Tile from "../common/Tile.svelte";
 </script>
@@ -32,11 +34,11 @@
   }
 </style>
 
-<TileWithBackground>
-  <img src="test.jpg" alt="A picture of me." />
-</TileWithBackground>
+{#if image}
+  <TileWithBackground>
+    <img src="test.jpg" alt="A picture of me." />
+  </TileWithBackground>
+{/if}
 <Tile>
-  <h1>
-    Hello, I’m Kevin, a React Native developer based in Stockholm, Sweden.
-  </h1>
+  <h1>{title}</h1>
 </Tile>

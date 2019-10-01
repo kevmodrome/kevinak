@@ -1,8 +1,7 @@
 <script>
-  import TileWithBackground from "../common/TileWithBackground.svelte";
   import Tile from "../common/Tile.svelte";
   import ReachOut from "./ReachOut.svelte";
-  import SkillsBox from "./SkillsBox.svelte";
+  import SkillsBox from "../common/SkillsBox.svelte";
 </script>
 
 <style>
