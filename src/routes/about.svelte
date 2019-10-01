@@ -1,8 +1,8 @@
 <script>
   import Divider from "../components/common/Divider.svelte";
-
   import Headline from "../components/common/Headline.svelte";
   import About from "../components/common/About.svelte";
+  import GoodAt from "../components/about/GoodAt.svelte";
 </script>
 
 <style>
@@ -19,5 +19,7 @@
 <div>
   <Headline title="About Me" />
   <About reverse />
+  <Divider />
+  <GoodAt title="What I'm Good At" />
   <Divider />
 </div>

@@ -1,51 +1,57 @@
 <script>
+  export let title;
   import Tile from "../common/Tile.svelte";
-  import Client from "../home/Client.svelte";
+  import SkillsBox from "../common/SkillsBox.svelte";
 </script>
 
 <style>
-  div {
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-end;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 20px;
   }
 
-  a {
-    position: relative;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 1em 0;
-    display: block;
-  }
-
-  a:hover:before {
-    right: auto;
-    width: 100%;
-  }
-
-  a:visited {
-    color: black;
-  }
-
-  a:before {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    bottom: 20px;
-    left: 0;
-    background-color: #353f99;
-    transition: all 0.2s ease-in-out 0s;
+  h2 {
+    grid-column: 1 / -1;
   }
 </style>
 
 <Tile>
-  <h2>Work</h2>
-  <Client />
-  <Client />
-  <div>
-    <a href="/">
-      <h3>See more of my work &#8594</h3>
-    </a>
+  <div class="container">
+    {#if title}
+      <h2>{title}</h2>
+    {/if}
+    <div class="text">
+      <p>
+        Eget montes, molestie sapien morbi vitae, ipsum. Viverra bibendum amet
+        metus malesuada mus arcu ut turpis. Iaculis fames aenean nisi, id
+        dignissim morbi cursus. Hendrerit eget lobortis diam adipiscing.
+        Consectetur velit nec lacus, habitant. Nunc platea vel congue platea.
+        Enim purus integer est a gravida faucibus metus.
+      </p>
+      <p>
+        Fringilla in lorem rhoncus senectus fermentum, augue in suspendisse
+        nulla. Et quis urna volutpat amet, dui lacus. Vulputate dignissim
+        convallis egestas mauris diam egestas. Quam risus at ut massa. Enim
+        pulvinar elit viverra nunc tincidunt velit. Tellus interdum dolor
+        tristique.
+      </p>
+    </div>
+    <div class="text">
+      <p>
+        Fringilla in lorem rhoncus senectus fermentum, augue in suspendisse
+        nulla. Et quis urna volutpat amet, dui lacus. Vulputate dignissim
+        convallis egestas mauris diam egestas. Quam risus at ut massa. Enim
+        pulvinar elit viverra nunc tincidunt velit. Tellus interdum dolor
+        tristique.
+      </p>
+      <p>
+        Eget montes, molestie sapien morbi vitae, ipsum. Viverra bibendum amet
+        metus malesuada mus arcu ut turpis. Iaculis fames aenean nisi, id
+        dignissim morbi cursus. Hendrerit eget lobortis diam adipiscing.
+        Consectetur velit nec lacus, habitant. Nunc platea vel congue platea.
+        Enim purus integer est a gravida faucibus metus.
+      </p>
+    </div>
   </div>
 </Tile>
