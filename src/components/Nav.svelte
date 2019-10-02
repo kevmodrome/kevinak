@@ -23,12 +23,6 @@
     align-items: center;
     justify-content: center;
   }
-  @media (min-width: 500px) {
-    nav {
-      height: 120px;
-      justify-content: space-between;
-    }
-  }
 
   .logo-container {
     flex: 0 1 auto;
@@ -43,16 +37,6 @@
 
   ul {
     display: none;
-  }
-  @media (min-width: 500px) {
-    ul {
-      display: flex;
-      flex: 1 1 auto;
-      margin: 0;
-      padding: 0;
-      justify-content: flex-end;
-      align-items: center;
-    }
   }
   ul::after {
     content: "";
@@ -71,6 +55,18 @@
   }
 
   @media (min-width: 500px) {
+    nav {
+      height: 120px;
+      justify-content: space-between;
+    }
+    ul {
+      display: flex;
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+      justify-content: flex-end;
+      align-items: center;
+    }
     .burger {
       display: none;
     }
