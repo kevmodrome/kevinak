@@ -15,14 +15,13 @@
   .center {
     max-width: 1200px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
   }
   .columns {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
   }
 
   a {
@@ -50,15 +49,6 @@
   @media (min-width: 500px) {
     .container {
       padding: 40px;
-    }
-    .columns {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: space-between;
-    }
-    .columns {
-      flex-direction: row;
-      justify-content: space-between;
     }
   }
   @media (min-width: 1080px) {
