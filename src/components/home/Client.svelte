@@ -1,50 +1,18 @@
 <style>
   .container {
     position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-  .text {
-    flex: 1;
-    margin-right: 0;
-    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
   }
   .title {
     margin-bottom: 10px;
   }
-  .image {
-    flex: 1;
-  }
   img {
     width: 100%;
-    max-height: 150px;
+    max-height: 250px;
     object-fit: cover;
-  }
-  @media (min-width: 500px) {
-    .container {
-      flex-direction: row;
-    }
-    .text {
-      flex: 3;
-      margin-right: 20px;
-      margin-bottom: 0;
-    }
-    .image {
-      flex: 1;
-    }
-  }
-  @media (min-width: 1080px) {
-    .container {
-      flex-direction: row;
-    }
-    .text {
-      flex: 3;
-      margin-right: 20px;
-      margin-bottom: 0;
-    }
-    .image {
-      flex: 1;
-    }
   }
 </style>
 
