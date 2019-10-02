@@ -8,8 +8,9 @@
     color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    padding: 30px 20px;
+    padding: 10px;
   }
 
   .center {
@@ -17,7 +18,6 @@
     width: 100%;
   }
   .columns {
-    margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-column-gap: 10px;
@@ -48,12 +48,7 @@
   }
   @media (min-width: 500px) {
     .container {
-      padding: 40px;
-    }
-  }
-  @media (min-width: 1080px) {
-    .container {
-      padding: 60px;
+      padding: 40px 30px;
     }
   }
 </style>
